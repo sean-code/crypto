@@ -53,3 +53,28 @@ else:
 
 
 
+# Solution received
+
+#  => output of this code might look like based on historical data.
+# Let's say we ran this code with historical USDT futures prices from February 28, 2022. Here is an example output we might get:
+
+
+
+# Arbitrage opportunities found:
+# bybit-BTC/USDT-0325: 48794.5 vs bitfinex-BTCF0: 49543.0, price diff: 1.52%
+# bybit-BTC/USDT-0325: 48794.5 vs bitget-BTCUSDT0625: 49268.0, price diff: 0.97%
+# bybit-BTC/USDT-0325: 48794.5 vs coinbase-BTC-USD-0325: 49442.0, price diff: 1.33%
+# bybit-BTC/USDT-0325: 48794.5 vs huobi-BTC-USD-0325: 49561.6, price diff: 1.61%
+# bybit-BTC/USDT-0325: 48794.5 vs okex-BTC-USD-0325: 49334.0, price diff: 1.09%
+# bitfinex-BTCF0: 49543.0 vs bitget-BTCUSDT0625: 49268.0, price diff: 0.56%
+# bitfinex-BTCF0: 49543.0 vs coinbase-BTC-USD-0325: 49442.0, price diff: 0.20%
+# bitfinex-BTCF0: 49543.0 vs huobi-BTC-USD-0325: 49561.6, price diff: 0.04%
+# bitfinex-BTCF0: 49543.0 vs okex-BTC-USD-0325: 49334.0, price diff: 0.42%
+# bitget-BTCUSDT0625: 49268.0 vs coinbase-BTC-USD-0325: 49442.0, price diff: 0.35%
+# bitget-BTCUSDT0625: 49268.0 vs huobi-BTC-USD-0325: 49561.6, price diff: 0.59%
+# bitget-BTCUSDT0625: 49268.0 vs okex-BTC-USD-0325: 49334.0, price diff: 0.13%
+# coinbase-BTC-USD-0325: 49442.0 vs huobi-BTC-USD-0325: 49561.6, price diff: 0.24%
+# coinbase-BTC-USD-0325: 49442.0 vs okex-BTC-USD-0325: 49334.0, price diff: 0.22%
+# huobi-BTC-USD-0325: 49561.6 vs okex-BTC-USD-0325: 49334.0, price diff: 0.46%
+
+
