@@ -41,3 +41,35 @@ const markets = [];
 
   console.log(opportunities);
 })();
+
+
+
+
+
+
+// Solution 2
+// This code assumes that you have access to up-to-date market data for USDT futures across the different exchanges
+
+// Define the different exchanges and their respective prices for USDT futures
+const kucoinPrice = 100;
+const binancePrice = 101;
+const huobiPrice = 102;
+const okxPrice = 99;
+const coinbasePrice = 98;
+const bybitPrice = 97;
+const bitgetPrice = 96;
+const bitfinexPrice = 95;
+
+// Calculate the highest and lowest prices among the exchanges
+const highestPrice = Math.max(kucoinPrice, binancePrice, huobiPrice, okxPrice, coinbasePrice, bybitPrice, bitgetPrice, bitfinexPrice);
+const lowestPrice = Math.min(kucoinPrice, binancePrice, huobiPrice, okxPrice, coinbasePrice, bybitPrice, bitgetPrice, bitfinexPrice);
+
+// Calculate the potential profit from buying at the lowest price and selling at the highest price
+const potentialProfit = (highestPrice - lowestPrice) / lowestPrice;
+
+// Check if the potential profit is greater than 0.1%
+if (potentialProfit > 0.001) {
+  console.log("Arbitrage opportunity found! Potential profit: " + (potentialProfit * 100) + "%");
+} else {
+  console.log("No arbitrage opportunity found.");
+}
