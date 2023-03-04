@@ -73,3 +73,50 @@ if (potentialProfit > 0.001) {
 } else {
   console.log("No arbitrage opportunity found.");
 }
+
+
+
+
+
+//Solution 3 -fixed
+// Define the different exchanges and their respective prices for USDT futures
+const prices = {
+  "kucoin": 100,
+  "binance": 101,
+  "huobi": 102,
+  "okx": 99,
+  "coinbase": 98,
+  "bybit": 97,
+  "bitget": 96,
+  "bitfinex": 95
+};
+
+// Determine the exchange with the lowest price
+let lowestExchange, lowestPrice = Number.MAX_VALUE;
+for (let exchange in prices) {
+  if (prices[exchange] < lowestPrice) {
+    lowestExchange = exchange;
+    lowestPrice = prices[exchange];
+  }
+}
+
+// Determine the exchange with the highest price relative to the lowest price
+let highestExchange, highestPrice = Number.MIN_VALUE;
+for (let exchange in prices) {
+  let price = prices[exchange];
+  if (price > highestPrice && price > lowestPrice) {
+    highestExchange = exchange;
+    highestPrice = price;
+  }
+}
+
+// Calculate the potential profit from buying at the lowest price and selling at the highest price
+const potentialProfit = (highestPrice - lowestPrice) / lowestPrice;
+
+// Check if the potential profit is greater than 0.1%
+if (potentialProfit > 0.001) {
+  console.log(`Arbitrage opportunity found! Buy at ${lowestExchange} for ${lowestPrice} and sell at ${highestExchange} for ${highestPrice}. Potential profit: ${(potentialProfit * 100)}%`);
+} else {
+  console.log("No arbitrage opportunity found.");
+}
+
